@@ -7,17 +7,26 @@
     </div>
 
     <div id="buttons">
-        <button>option_1</button>
-        <button>option_2</button>
-        <button>option_3</button>
-
+        <button id="one"  >option_1</button>
+        <button id="two"  >option_2</button>
+        <button id="three">option_3</button>
     </div>
+
+    <button id="randomize">Randomize</button>
+    <button id="test" onclick="randomize()">test</button>
 
 
 </div>
 
 <script>
-    function randomize(button) {
+    function randomize() {
+        var button1 = document.getElementById("one");
+        var button2 = document.getElementById("two");
+        var button3 = document.getElementById("three");
+
+        button1.innerHTML = "F";
+        button2.innerHTML = "u";
+        button3.innerHTML = "k";
 
     }
 </script>
