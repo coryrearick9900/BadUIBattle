@@ -55,3 +55,10 @@ function clearText() {
 
 
 }
+
+function backspace() {
+  let input = document.getElementById("Name_I").value;
+  let size = document.getElementById("Name_I").value.length;
+
+  document.getElementById("Name_I").value = input.replace(input.charAt(size-1), '');
+}
