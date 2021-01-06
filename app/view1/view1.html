@@ -3,7 +3,9 @@
 <div id="fields">
     <div id="textbox">
         <p>Enter your name:</p>
-        <input readonly>
+        <label>
+            <input id="Name_I" value="" readonly>
+        </label>
     </div>
 
     <div id="buttons"onload="randomize()">
@@ -40,6 +42,16 @@
             let randomNumber = Math.random()*62;
             arrayOfItems[i].innerHTML = values.charAt(randomNumber);
         }
+
+
+    }
+
+
+    // This funciton adds the value of the button to the text field
+    function enterValue(buttonID) {
+        const letter = document.getElementById(buttonID).innerHTML;
+        console.log("Entering " + letter);
+        document.getElementById("Name_I").value += letter;
 
 
     }
