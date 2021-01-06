@@ -1,4 +1,4 @@
-<sub_title style="font-size: xx-large; color: red;">User Input</sub_title>
+<p style="font-size: xx-large; color: red;">User Input</p>
 
 <div id="fields">
     <div id="textbox">
@@ -6,10 +6,13 @@
         <input readonly>
     </div>
 
-    <div id="buttons">
+    <div id="buttons"onload="randomize()">
         <button id="one"  >option_1</button>
         <button id="two"  >option_2</button>
         <button id="three">option_3</button>
+        <button id="four" >option_4</button>
+        <button id="five" >option_5</button>
+        <button id="six"  >option_6</button>
     </div>
 
     <button id="randomize">Randomize</button>
@@ -20,13 +23,24 @@
 
 <script>
     function randomize() {
-        var button1 = document.getElementById("one");
-        var button2 = document.getElementById("two");
-        var button3 = document.getElementById("three");
+        const values = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-        button1.innerHTML = "F";
-        button2.innerHTML = "u";
-        button3.innerHTML = "k";
+        let button1 = document.getElementById("one");
+        let button2 = document.getElementById("two");
+        let button3 = document.getElementById("three");
+        let button4 = document.getElementById("four");
+        let button5 = document.getElementById("five");
+        let button6 = document.getElementById("six");
+
+        let arrayOfItems = [button1, button2, button3, button4, button5, button6];
+
+        // console.log("here");
+
+        for (let i = 0; i < arrayOfItems.length; i++) {
+            let randomNumber = Math.random()*62;
+            arrayOfItems[i].innerHTML = values.charAt(randomNumber);
+        }
+
 
     }
 </script>
