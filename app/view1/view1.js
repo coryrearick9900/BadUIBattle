@@ -11,7 +11,7 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', [function() {
   randomize();
-  clearText();
+  clearText_s();
 }]);
 
 function randomize() {
@@ -53,7 +53,7 @@ function enterValue(buttonID) {
 
 
 // Function to clear the text field value to blank
-function clearText() {
+function clearText_s() {
   // console.log("clearing?");
 
   document.getElementById("Name_I").value = "";
@@ -70,5 +70,24 @@ function backspace_s() {
   }
 
   document.getElementById("Name_I").value = input;
+}
+
+function chancetime() {
+    let letterinput = document.getElementById("letterin").value;
+    const values = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    if (letterinput !== "") {
+      const chance = Math.random() * 10;
+      console.log(chance);
+
+      if (chance < 2.5) {
+        document.getElementById("Name_I").value += letterinput;
+      } else {
+        let anotherchance = Math.floor(Math.random() * 62);
+        document.getElementById("Name_I").value += values.charAt(anotherchance);
+      }
+
+      document.getElementById("letterin").value = "";
+    }
 }
 

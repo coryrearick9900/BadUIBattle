@@ -4,7 +4,7 @@
     <div id="textbox">
         <p class="first">Enter your name:</p>
         <label>
-            <input id="Name_I" value="" onload="clearText(); randomize()" readonly>
+            <input id="Name_I" value="" onload="clearText_s(); randomize()" readonly>
         </label>
     </div>
 
@@ -21,10 +21,16 @@
 
 
 <!--    This button randomizes the buttons  -->
-    <button id="randomize" onclick="randomize()">Randomize</button>
+    <button class="bottom" id="randomize" onclick="randomize()">Randomize</button>
 
 <!--    This button removes the last letter in the input field  -->
-    <button id="backspace" onclick="backspace_s()">Backspace</button>
+    <button class="bottom" id="backspace" onclick="backspace_s()">Backspace</button>
+
+    <button class="bottom" id="chancetime" onclick="chancetime()">Maybe Insert:
+        <label>
+            <input class="letterin" id="letterin" maxlength="1">
+        </label>
+    </button>
 
 
 </div>
@@ -36,7 +42,14 @@
         text-align: center;
     }
 
+    .letterin {
+        width: 15px;
+        text-align: center;
+    }
 
+    .bottom {
+        height: 35px;
+    }
 
 </style>
 

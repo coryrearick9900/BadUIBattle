@@ -32,7 +32,7 @@ function addNumber(button) {
 
 }
 
-function clearText() {
+function clearText_d() {
     document.getElementById("math").value = "";
 }
 
@@ -43,7 +43,7 @@ function evaluateMathBox() {
     if (final >= 32 && final <= 126) {
         let letter = String.fromCharCode(final);
         document.getElementById("namebox").value += letter;
-        clearText();
+        clearText_d();
     }
 
 }
