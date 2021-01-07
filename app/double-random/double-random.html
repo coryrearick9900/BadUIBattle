@@ -1,13 +1,29 @@
 <h1>Double Random User Input</h1>
 
 <div id="contents">
+    <div id="numberbuttons">
+        <button id="random" onclick="addNumber('random')">RAND()%5</button>
+        <button id="plus" onclick="addNumber('plus')">+</button>
+        <button id="minus" onclick="addNumber('minus')">-</button>
+        <button id="mult" onclick="addNumber('mult')">×</button>
+        <button id="div" onclick="addNumber('div')">/</button>
+    </div>
+    <div id="mathbox">
+        <input id="math" readonly>
+        <button onlcick="evaluate()">Evaluate</button>
+        <button onlick="clear()">Clear</button>
+    </div>
+
+
+
+
     <div id="textbox">
         <p>Enter your name:</p>
         <input readonly>
     </div>
 
-    
-
 
 
 </div>
+
+
