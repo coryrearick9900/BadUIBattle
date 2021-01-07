@@ -61,14 +61,14 @@ function clearText() {
 
 }
 
-function backspace() {
+function backspace_s() {
   let input = "";
   let text = document.getElementById("Name_I").value;
 
   for (let i = 0; i < text.length-1; i++) {
     input += text.charAt(i);
-    // console.log(input);
   }
 
   document.getElementById("Name_I").value = input;
 }
+

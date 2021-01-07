@@ -9,9 +9,9 @@
         <button id="div" onclick="addNumber('div')">/</button>
     </div>
     <div id="mathbox">
-
-        <button onclick="evaluate()">Evaluate</button>
-        <button onclick="clear()">Clear</button>
+        <label for="math"></label><input id="math" readonly>
+        <button onclick="evaluateMathBox()">Evaluate</button>
+        <button onclick="clearText()">Clear</button>
     </div>
 
 
@@ -19,7 +19,17 @@
 
     <div id="textbox">
         <p>Enter your name:</p>
-        <input readonly>
+        <input id="namebox" readonly>
+        <button onclick="backspace_d()">Backspace</button>
+        <button onclick="space()">Space</button>
+    </div>
+
+    <div class="empty-space">
+
+    </div>
+
+    <div class="table-div">
+        <img class="table" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ASCII-Table-wide.svg/875px-ASCII-Table-wide.svg.png"/>
     </div>
 
 

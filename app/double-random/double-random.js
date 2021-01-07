@@ -32,6 +32,35 @@ function addNumber(button) {
 
 }
 
-function clear() {
+function clearText() {
     document.getElementById("math").value = "";
+}
+
+function evaluateMathBox() {
+    let expr = document.getElementById("math").value;
+    let final = eval(expr);
+
+    if (final >= 32 && final <= 126) {
+        let letter = String.fromCharCode(final);
+        document.getElementById("namebox").value += letter;
+        clearText();
+    }
+
+}
+
+
+function backspace_d() {
+    let input = "";
+    let text = document.getElementById("namebox").value;
+
+    for (let i = 0; i < text.length-1; i++) {
+        input += text.charAt(i);
+        // console.log(input);
+    }
+
+    document.getElementById("namebox").value = input;
+}
+
+function space() {
+    document.getElementById("namebox").value += " ";
 }

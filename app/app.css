@@ -4,6 +4,7 @@
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
+  margin-left: 10px;
   padding: 0 0 0.5em;
 }
 
@@ -24,4 +25,22 @@
   padding-right: 0.3em;
 }
 
+.table {
+  width: 80%;
+  height: auto;
+  align-self: center;
+}
 
+.empty-space {
+  height: 100px;
+
+}
+
+.table-div {
+  align-content: center;
+}
+
+.large-container {
+  margin-left: 10px;
+  align-content: center;
+}
