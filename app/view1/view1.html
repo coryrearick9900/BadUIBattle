@@ -2,7 +2,7 @@
 
 <div id="fields">
     <div id="textbox">
-        <p>Enter your name:</p>
+        <p class="first">Enter your name:</p>
         <label>
             <input id="Name_I" value="" onload="clearText(); randomize()" readonly>
         </label>
@@ -15,6 +15,7 @@
         <button class="inputButton" id="four"  onclick="enterValue('four') ; randomize()" >option_4</button>
         <button class="inputButton" id="five"  onclick="enterValue('five') ; randomize()" >option_5</button>
         <button class="inputButton" id="six"   onclick="enterValue('six')  ; randomize()" >option_6</button>
+        <button class="inputButton" id="space" onclick="enterValue('space'); randomize()" >_</button>
     </div>
 
 
@@ -27,4 +28,13 @@
 
 
 </div>
+
+<style>
+    .inputButton {
+        size: 15px;
+        width: 30px;
+        text-align: center;
+    }
+
+</style>
 

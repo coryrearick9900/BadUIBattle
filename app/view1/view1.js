@@ -39,9 +39,14 @@ function randomize() {
 
 // This funciton adds the value of the button to the text field
 function enterValue(buttonID) {
-  const letter = document.getElementById(buttonID).innerHTML;
-  console.log("Entering " + letter);
-  document.getElementById("Name_I").value += letter;
+  if (buttonID !== "space") {
+    const letter = document.getElementById(buttonID).innerHTML;
+    // console.log("Entering " + letter);
+    document.getElementById("Name_I").value += letter;
+  }else {
+    document.getElementById("Name_I").value += ' ';
+
+  }
 
 
 }
@@ -49,7 +54,7 @@ function enterValue(buttonID) {
 
 // Function to clear the text field value to blank
 function clearText() {
-  console.log("clearing?");
+  // console.log("clearing?");
 
   document.getElementById("Name_I").value = "";
 
@@ -57,8 +62,13 @@ function clearText() {
 }
 
 function backspace() {
-  let input = document.getElementById("Name_I").value;
-  let size = document.getElementById("Name_I").value.length;
+  let input = "";
+  let text = document.getElementById("Name_I").value;
 
-  document.getElementById("Name_I").value = input.replace(input.charAt(size-1), '');
+  for (let i = 0; i < text.length-1; i++) {
+    input += text.charAt(i);
+    // console.log(input);
+  }
+
+  document.getElementById("Name_I").value = input;
 }

@@ -31,3 +31,7 @@ function addNumber(button) {
     document.getElementById("math").value += input;
 
 }
+
+function clear() {
+    document.getElementById("math").value = "";
+}
