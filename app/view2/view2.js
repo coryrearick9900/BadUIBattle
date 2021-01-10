@@ -12,3 +12,8 @@ angular.module('myApp.view2', ['ngRoute'])
 .controller('View2Ctrl', [function() {
 
 }]);
+
+function makestuffhappen() {
+  document.getElementById("variable").innerHTML = "";
+  document.getElementById("variable").append("There's nothing implemented to make suggestions");
+}
